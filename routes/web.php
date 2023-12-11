@@ -128,8 +128,6 @@ Route::get('/comics', function () {
             "type" => "graphic novel",
         ]
     ];
-    return view('comics', [
-        'comics' => $comics,
-    ]);
+    return view('comics', compact('comics'));
 })->name('comics');
 
