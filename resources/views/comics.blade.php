@@ -10,15 +10,13 @@
     <section>
       <div class="container">
         <div class="row">
-          <div class="col-4">
-            Film 1
-          </div>
-          <div class="col-4">
-            Film 2
-          </div>
-          <div class="col-4">
-            Film 3
-          </div>
+          @foreach ($comics as $comic)
+            <div class="card">
+              {{ $comic["title"] }}
+            </div>
+            <p>{{ $comic["description"] }}</p>
+            <img src="{{ $comic['thumb'] }}" alt="">
+          @endforeach
         </div>
       </div>
     </section>
